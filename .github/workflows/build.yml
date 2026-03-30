@@ -11,9 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build docker image
-        run: docker build --target=production -t adrianoSQL/projeto_go:${{ github.ref_name }} .
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
