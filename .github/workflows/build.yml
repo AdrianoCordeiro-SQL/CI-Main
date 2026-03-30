@@ -26,5 +26,5 @@ jobs:
           context: .
           push: true
           tags: |
-            adrianoSQL/projeto_go:latest
-            adrianoSQL/projeto_go:${{ github.ref_name }}
+            adrianocordeiro/projeto_go:latest
+            adrianocordeiro/projeto_go:${{ github.ref_name }}
