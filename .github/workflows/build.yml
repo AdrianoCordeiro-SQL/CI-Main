@@ -23,5 +23,8 @@ jobs:
       - name: Constrói e envia a imagem para o Docker Hub
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: true
-          tags: latest, adrianoSQL/projeto_go:${{ github.ref_name }}
+          tags: |
+            adrianoSQL/projeto_go:latest
+            adrianoSQL/projeto_go:${{ github.ref_name }}
