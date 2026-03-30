@@ -1,0 +1,40 @@
+# --- Controle de Versão ---
+.git
+.gitignore
+
+# --- Binários e Build ---
+# Não queremos levar o executável que você buildou no Windows/Mac 
+# para dentro de um contêiner Linux
+main
+app
+*.exe
+*.dll
+*.so
+bin/
+
+# --- Dependências ---
+# Se você usa Go Modules, deixe o Docker baixar as dependências (go mod download)
+# Não leve a pasta vendor a menos que seja um requisito do projeto
+vendor/
+
+# --- Configurações de IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Segredos e Variáveis de Ambiente ---
+# MUITO IMPORTANTE: Nunca leve seus segredos para dentro da imagem!
+.env
+*.pem
+*.key
+
+# --- Logs e Temporários ---
+*.log
+tmp/
+temp/
+
+# --- Docker ---
+Dockerfile
+docker-compose.yml
+.dockerignore
